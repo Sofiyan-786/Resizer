@@ -1,0 +1,105 @@
+/* মূল ব্যাকগ্রাউন্ড এবং ফন্ট */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #e0e1dd, #4577b9, hsl(212, 29%, 36%), #1b263b, #0d1b2a);
+    background-size: 400% 400%;
+    animation: gradient 20s ease infinite;
+    color: #e0e1dd;
+}
+
+@keyframes gradient {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    max-width: 400px;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #e0e1dd;
+    margin-bottom: 15px;
+}
+
+p {
+    color: #ffffff;
+}
+b {font-size: 2rem;
+    color: #4577b9;
+    margin-bottom: 15px;
+}
+
+/* ড্র্যাগ & ড্রপ বক্স */
+#dropZone {
+    width: 100%;
+    height: 150px;
+    margin: 20px 0;
+    border: 3px dashed #415a77;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #e0e1dd;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s, border 0.3s;
+}
+#dropZone.dragover {
+    background-color: #415a77;
+    color: #e0e1dd;
+    border-color: #778da9;
+}
+
+/* ফাইল ইনপুট বাটন */
+input[type="file"] {
+    margin: 15px 0;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background: #778da9;
+    color: #e0e1dd;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s, background 0.3s;
+}
+input[type="file"]:hover {
+    transform: scale(1.05);
+    background: #415a77;
+}
+
+/* ক্যানভাস */
+canvas {
+    margin-top: 20px;
+    border: 3px solid #1b263b;
+    border-radius: 15px;
+}
+
+/* ডাউনলোড লিঙ্ক */
+#downloadLink {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: #0d1b2a;
+    color: #e0e1dd;
+    font-weight: bold;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
+}
+#downloadLink:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    background: #415a77;
+}

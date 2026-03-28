@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>পাসপোর্ট সাইজ ছবি রিসাইজার</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Passport Size <br> Photo Resizer</h1>
+        <p>ছবি আপলোড করুন বা ড্র্যাগ & ড্রপ করুন। <br> <b>Drag&Drop</b></p>
+
+        <div id="dropZone">ছবি এখানে ড্রপ করুন</div>
+        <input type="file" id="upload" accept="image/*">
+        <br>
+        <canvas id="canvas" width="300" height="400"></canvas>
+        <br>
+        <a id="downloadLink" download="passport_size.png">ডাউনলোড করুন</a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
